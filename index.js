@@ -1,11 +1,4 @@
 
-let menuData = [
-    {
-        title: 'Home',
-
-    }
-]
-
 const data = [
     {
         id: "abc123",
@@ -38,10 +31,6 @@ const data = [
 let buttonMenuOpen = document.querySelector('.menu-icon-open');
 let buttonMenuClose = document.querySelector('.menu-icon-close');
 let menu = document.querySelector('.nav-menu-lists');
-
-console.log(menu);
-
-
 
 
 function menuResponsive() {
@@ -107,6 +96,82 @@ function closeMenu() {
 }
 
 
+function openMenuDynamic(item, itemsArr) {
+    let itemSelected;
+    let itemWrapper = item.querySelector('.content_image');
+    let itemArr = Array.from(itemWrapper.classList);
+
+    if (itemsArr && item && itemsArr.length > 0) {
+        itemsArr.forEach((item) => {
+            var itemOpen = item.querySelector('.content_image');
+            if (itemOpen.classList.contains('links-show')) {
+                itemOpen.classList.remove('links-show');
+            }
+        });
+    }
+
+    if (item.classList.contains('image_content_wrapper')) {
+        
+        itemSelected = item.querySelector('.content_image');
+    }
+
+    if (itemWrapper) {
+        if (itemArr.length > 0 && itemArr.includes('links-show')) {
+            
+            itemWrapper.classList.remove('links-show');
+        }  else {
+            
+            itemWrapper.classList.add('links-show');
+        }
+    }
+    
+}
+
+
+function menuRender(menu, btn, arr, btns) {
+    console.log(btns)
+    let menuItemActive = null;
+    var currentMenuListItems = menu.querySelectorAll('.menu-list-items');
+
+    currentMenuListItems.forEach((item, index) => {
+        if (index === 0) {
+            console.log(item.dataset)
+            menuItemActive = item.dataset.list;
+        }
+    })
+
+    console.log(menuItemActive)
+    console.log(currentMenuListItems)
+
+    if (menuItemActive !== null) {
+        currentMenuListItems.forEach((item, index) => {
+            if (item.dataset.list === menuItemActive) {
+                console.log(item)
+
+                item.classList.add('show');
+            }
+        });
+    }
+
+    if (menu && btn && arr) {
+        if (!menu.classList.contains('open-menu')) {
+            menu.classList.add('open-menu');
+        } else {
+            menu.classList.remove('open-menu');
+        }
+        if (!btn.classList.contains('openMenu')) {
+            btn.classList.add('openMenu');
+        } else { 
+            btn.classList.remove('openMenu');
+        }
+    }
+}
+
+function menuRenderItems() {
+
+}
+
+
 buttonMenuOpen.addEventListener('click', openMenu);
 
 buttonMenuClose.addEventListener('click', closeMenu);
@@ -115,11 +180,46 @@ document.addEventListener("DOMContentLoaded", function() {
     var botones = document.querySelectorAll(".menu-list li");
     var prevMenuList = null;
     var prevMenuListItems = [];
+    var arrItemsFilter = [];
     var menuShowItems = document.querySelector('.menu-list__show');
     var menuContainer = document.querySelector('.menu-container__show')
     var prevBoton = null;
     var prevArrow = null;
+    var prevNavBtn = null;
+    let prevItemSelected;
     var label = document.createElement("label");
+    var navListButtons = document.querySelectorAll('.nav_container li')
+    var dynamicButons = document.querySelectorAll('.image_content_wrapper')
+
+    if (navListButtons.contains) {}
+
+    
+
+    dynamicButons.forEach(function(boton, index) {
+        boton.addEventListener("click", function(e) {
+            e.preventDefault();
+            prevItemSelected = boton;
+            
+            openMenuDynamic(boton, dynamicButons)
+        });
+    });
+            
+
+    navListButtons.forEach(function(boton, index) {
+
+        if (boton.classList.contains('menu-nav-li')) {
+            arrItemsFilter.push(boton);
+        }
+
+        boton.addEventListener("click", function(e) {
+            e.preventDefault();
+            var menuContainer = boton.querySelector('.menu-container');
+            var trueBoton = boton.querySelector('button');
+
+            menuRender(menuContainer, trueBoton, arrItemsFilter, botones)
+        });
+
+    })
     
     botones.forEach(function(boton, index) {
       boton.addEventListener("click", function() {
@@ -128,7 +228,9 @@ document.addEventListener("DOMContentLoaded", function() {
         var currentBtn = boton.querySelector('button');
         var arrow = currentBtn.querySelector('span')
         var btnText = currentBtn.textContent;
-        console.log(currentBtn, arrow)
+
+
+        menuRenderItems(buttonMenuItem, currentMenuListItems, currentBtn, arrow, btnText);
 
         menuContainer.appendChild(label);
         label.textContent = btnText;
@@ -168,3 +270,4 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     });
   });
+

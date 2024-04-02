@@ -1,6 +1,21 @@
 
 gsap.registerPlugin(ScrollTrigger) 
 
+let elem  = document.querySelector('.header-nav')
+let menuElem = document.querySelector('.nav-menu-lists')
+
+let blackColor = 'rgba(0, 0, 0, 0.65)';
+
+gsap.to("#second-section", {
+  scrollTrigger: {
+    trigger: "#third-section",
+    start: 1000,
+    end: 1400,
+    scrub: true
+  },
+  opacity: 0,
+  duration: 1,
+})
 
 gsap.to(".picture_1", {
     scrollTrigger: {
@@ -32,7 +47,6 @@ gsap.to(".picture_1", {
         start: "bottom bottom",
         end: 800,
         scrub: true,
-        markers:true
     }, // start the animation when ".box" enters the viewport (once)
     y: 0,
     duration: 1,
@@ -51,10 +65,28 @@ gsap.to(".picture_1", {
     
   });
 
+  const showAnim = gsap.from('.header-nav', {
+    yPercent: -150,
+    paused: true,
+    duration: 0.2
+  }).progress(1);
+  
+  ScrollTrigger.create({
+    start: "top top",
+    end: "max",
+    onUpdate: (self) => {
+      self.direction === -1 ? showAnim.play() : showAnim.reverse()
+    },
+    onLeaveBack: () => gsap.to('.header-nav', {
+      backgroundColor: "transparent",
+      duration: 0.2,
+    }),
+    onEnter: () => gsap.to('.header-nav', {
+      backgroundColor: blackColor,
+      duration: 1,
+    }),
+    toggleClass: {targets: elem, className: 'header-scrolling'},
 
+  });
 
-  let smoother = ScrollSmoother.create({
-    wrapper: '#smooth-wrapper',
-    content: '#smooth-content'
-  })
-
+  
