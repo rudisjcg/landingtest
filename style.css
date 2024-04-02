@@ -20,7 +20,7 @@ body {
 
 li {
     list-style: none;
-    
+
 }
 
 a {
@@ -81,7 +81,7 @@ a {
     gap: 20px;
 }
 
-.header-nav  ul{
+.header-nav .nav_container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -133,28 +133,33 @@ a {
     position: relative;
     color: #aaa;
     font-size: 16px;
-    
+
 }
 
-.search {display: inline-block;}
+.search {
+    display: inline-block;
+}
 
 .search input {
-  width: 250px;
-  height: 40px;
+    width: 250px;
+    height: 40px;
 
-  background: #fcfcfc;
-  border: none;
-  border-radius: 33px;
-  box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
-  font-weight: 700;
+    background: #fcfcfc;
+    border: none;
+    border-radius: 33px;
+    box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
+    font-weight: 700;
 }
 
-.search input { text-indent: 32px;}
-.search .fa-search { 
-  position: absolute;
-  top: 10px;
-  right: 30px;
-  color: #FF6363;
+.search input {
+    text-indent: 32px;
+}
+
+.search .fa-search {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    color: #FF6363;
 }
 
 
@@ -224,6 +229,7 @@ a {
     border-right: 1px solid #3D3E45;
 
 }
+
 
 .menu-list-container ul {
     display: flex;
@@ -430,6 +436,60 @@ a {
     margin-top: 20px;
 }
 
+
+.secondaryButton {
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* Menu component */
+
+.menu-container {
+    width: 100%;
+    border: 1px solid black;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    margin-top: 30px;
+    display: flex;
+    display: none;
+
+}
+
+.close {
+    display: none;
+}
+
+.menu-container ul {
+    width: 30%;
+    height: 100%;
+}
+
+.menu-container .menu-list__show {
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+
+.menu-container__show {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.menu-container__show label {
+    margin-top: 10px;
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+  
 .foruth-section-wrapper {
     width: 100%;
     max-width: 1400px;
@@ -438,6 +498,256 @@ a {
     gap: 20px;
     margin-top: 20px;
 }
+
+
+.menu-list li {
+    text-align: left;
+    width: 100%;
+    padding-left: 50px;
+}
+
+.menu-list-items {
+    position: absolute;
+    margin-top: 200px;
+    display: flex;
+    
+}
+
+.menu-list__show {
+    display: flex;
+}
+
+.figure_item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 300ms ease;
+
+}
+
+.figure_item.show {
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+.fig_img {
+    width: 100%;
+    height: 200px;
+    max-width: 170px;
+    max-height: 100%;
+    object-fit: none;
+    background-color: white;
+    border-radius: 30px;
+    overflow: hidden;
+
+}
+
+figcaption {
+    font-size: 10px;
+}
+
+.arrow_right{
+    width: 15px;
+    
+}
+
+.arrow_span {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 300ms ease;
+}
+
+.change_color {
+    color: #FF6363;
+}
+
+.change_color_svg {
+    fill: #FF6363;
+}
+
+.show_svg {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* footer */
+
+#test4 {
+    height: 100vh;
+}
+
+.footer_container {
+    height: 659.55px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    background-color: #070707;
+    color: white;
+}
+
+.footer__sections {
+    width: 300px;
+    height: 500px;
+}
+
+.footer_gray_bar {
+    width: 1400px;
+    background-color: #3D3E45;
+    height: 140px;
+    border-radius: 60px;
+    position: absolute;
+    top: -80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bar__item-sections {
+    display: flex;
+    gap: 20px;
+
+        div {
+            display: flex;
+            flex-direction: column;
+        }
+}
+
+.bar_text_wrap span:last-child{
+    font-weight: 700;
+    font-size: 19px;
+}
+
+.footer__Wrapper {
+    max-width: 1600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.section__items {
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.section__title {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.text__wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer__sections:first-child .text__wrap {
+    gap: 30px;
+}
+
+.email__input-Wrapper {
+    width: 265px;
+    background-color: #202020;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.email__input-Wrapper .button_email-Input {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+} 
+
+.email__input-Wrapper .input_email_item {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+
+}
+
+.input_email_item:focus {
+    border: none !important;
+}
+
+
+.button_email-Input img {
+    width: 20px;
+    height: 20px;
+}
+
+.social__media {
+    display: flex;
+    gap: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .header-nav {
+        width: 100%;
+        justify-content: space-evenly !important;
+    }
+
+
+
+    .bar__item-sections {
+        width: 100%;
+        padding-left: 60px;
+    }
+
+    .footer__Wrapper {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+
+    .header-nav-3rdPart .primaryButton {
+        display: none !important;
+    }
+
+    .footer_container {
+        height: 100%;
+    }
+
+    .nav_container {
+        display: none !important;
+    }
+
+    .footer_gray_bar {
+        width: 100%;
+        position: unset;
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    
+    .footer_gray_bar {
+        width: 1000px;
+        left: 10px;
+    }
+
 
 .item_content {
     display: flex;
@@ -581,17 +891,15 @@ SVG Icons - svgicons.sparkk.fr
 .svg-icon {
     width: 1em;
     height: 1em;
-  }
-  
-  .svg-icon path,
-  .svg-icon polygon,
-  .svg-icon rect {
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
     fill: #FF6363;
-  }
-  
-  .svg-icon circle {
+}
+
+.svg-icon circle {
     stroke: #FF6363;
     stroke-width: 1;
-  }
-
-  
+}
