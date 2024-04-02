@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">    
+    <link rel="stylesheet" href="style.css">  
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">  
 <title>Document</title>
 </head>
+
 <body>
     <section id="header">
         <div class="spanHeader">
@@ -20,36 +24,276 @@
             <article class="menu--Logo">
                     <ul class="first-part_nav">
                         <li class="menu-nav-li">
-                            <button class="menu-icon menu-icon-open"><svg class="svg-icon" viewBox="0 0 20 20">
+                            <button class="menu-icon menu-icon-open open"><svg class="svg-icon" viewBox="0 0 20 20">
                                 <path fill="none" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314
                                     c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743
                                     s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314
-                                    c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path>
+                                    c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z">
+                                </path>
                             </svg>
-                            
+
                         </button>
                         <button class="menu-icon menu-icon-close open"><svg class="svg-icon" viewBox="0 0 20 20">
+                                <path fill="none"
+                                    d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z">
+                                </path>
+                            </svg>
+                        <button class="menu-icon menu-icon-close"><svg class="svg-icon" viewBox="0 0 20 20">
 							<path fill="none" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path>
 						</svg>
                         </button>
-                        </li>
-                        <li class="menu-nav-li">
-                            <img src="/assets/Layer_1.png"/>
-                        </li>
-                    </ul>
+                    </li>
+                    <li class="menu-nav-li">
+                        <img src="/assets/Layer_1.png" />
+                    </li>
+                </ul>
             </article>
-            <ul>
+            <ul class="nav_container">
                 <li class="menu-nav-li">
-                    <a href="#">Login</a>
+                    <button class="secondaryButton">Categories</button>
+                    <div class="menu-container">
+                        <ul class="menu-list">
+                            <li>
+                                <button class="secondaryButton">
+                                    Table Mounts
+                                    <span class="arrow_span">
+                                        <img class="arrow_right" src="/assets/right-arrow-svgrepo-com.svg" />
+                                    </span>
+                                </button>
+                                <div class="menu-list-items" data-list="1">
+                                    <div class="figure_item">
+                                        <img class="fig_img" src="/assets/image 32.png" />
+                                        <figcaption>
+                                            <h3>Table Mounts</h3>
+                                        </figcaption>
+                                    </div>
+                                    <div class="figure_item">
+                                        <img class="fig_img" src="/assets/image 33.png" />
+                                        <figcaption>
+                                            <h3>Clamp Mounts</h3>
+                                        </figcaption>
+                                    </div>
+                                    <div class="figure_item">
+                                        <img class="fig_img" src="/assets/image 34.png" />
+                                        <figcaption>
+                                            <h3>Kiosk & Desk Stands</h3>
+                                        </figcaption>
+                                    </div>
+                                    <div class="figure_item">
+                                        <img class="fig_img" src="/assets/image 35.png" />
+                                        <figcaption>
+                                            <h3>Wall Mounts</h3>
+                                        </figcaption>
+                                    </div>
+                                    <div class="figure_item">
+                                        <img class="fig_img" src="/assets/image 36.png" />
+                                        <figcaption>
+                                            <h3>Tablet Cases</h3>
+                                        </figcaption>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <button class="secondaryButton">
+
+                                    TV Mounts
+                                    <span class="arrow_span">
+                                        <img class="arrow_right" src="/assets/right-arrow-svgrepo-com.svg" />
+                                    </span>
+                                </button>
+                                <div class="menu-list-items" data-list="2">
+                                    <div class="figure_item">
+                                        <img class="fig_img" src="/assets/image 32.png" />
+                                        <figcaption>
+                                            <h3>Table test</h3>
+                                        </figcaption>
+                                    </div>
+                                    <div class="figure_item">
+                                        <img class="fig_img" src="/assets/image 33.png" />
+                                        <figcaption>
+                                            <h3>Clamp test</h3>
+                                        </figcaption>
+                                    </div>
+                                    <div class="figure_item">
+                                        <img class="fig_img" src="/assets/image 34.png" />
+                                        <figcaption>
+                                            <h3>Kiosk & Desk Stands</h3>
+                                        </figcaption>
+                                    </div>
+                                    <div class="figure_item">
+                                        <img class="fig_img" src="/assets/image 35.png" />
+                                        <figcaption>
+                                            <h3>Wall Mounts</h3>
+                                        </figcaption>
+                                    </div>
+                                    <div class="figure_item">
+                                        <img class="fig_img" src="/assets/image 36.png" />
+                                        <figcaption>
+                                            <h3>Tablet Cases</h3>
+                                        </figcaption>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <button class="secondaryButton">
+
+                                    Monitor Mounts
+                                    <span class="arrow_span">
+                                        <img class="arrow_right" src="/assets/right-arrow-svgrepo-com.svg" />
+                                    </span>
+                                </button>
+                                <div class="menu-list-items" data-list="2">
+                                    <div class="figure_item">
+                                        <img class="fig_img" src="/assets/image 32.png" />
+                                        <figcaption>
+                                            <h3>Table test 3</h3>
+                                        </figcaption>
+                                    </div>
+                                    <div class="figure_item">
+                                        <img class="fig_img" src="/assets/image 33.png" />
+                                        <figcaption>
+                                            <h3>Clamp test</h3>
+                                        </figcaption>
+                                    </div>
+                                    <div class="figure_item">
+                                        <img class="fig_img" src="/assets/image 34.png" />
+                                        <figcaption>
+                                            <h3>Kiosk & Desk Stands</h3>
+                                        </figcaption>
+                                    </div>
+                                    <div class="figure_item">
+                                        <img class="fig_img" src="/assets/image 35.png" />
+                                        <figcaption>
+                                            <h3>Wall Mounts</h3>
+                                        </figcaption>
+                                    </div>
+                                    <div class="figure_item">
+                                        <img class="fig_img" src="/assets/image 36.png" />
+                                        <figcaption>
+                                            <h3>Tablet Cases</h3>
+                                        </figcaption>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <button class="secondaryButton">
+
+                                    Laptop Mounts
+                                    <span class="arrow_span">
+                                        <img class="arrow_right" src="/assets/right-arrow-svgrepo-com.svg" />
+                                    </span>
+                                </button class="secondaryButton">
+                                <div class="menu-list-items" data-list="2">
+                                    <div class="figure_item">
+                                        <img class="fig_img" src="/assets/image 32.png" />
+                                        <figcaption>
+                                            <h3>Table test 4</h3>
+                                        </figcaption>
+                                    </div>
+                                    <div class="figure_item">
+                                        <img class="fig_img" src="/assets/image 33.png" />
+                                        <figcaption>
+                                            <h3>Clamp test</h3>
+                                        </figcaption>
+                                    </div>
+                                    <div class="figure_item">
+                                        <img class="fig_img" src="/assets/image 34.png" />
+                                        <figcaption>
+                                            <h3>Kiosk & Desk Stands</h3>
+                                        </figcaption>
+                                    </div>
+                                    <div class="figure_item">
+                                        <img class="fig_img" src="/assets/image 35.png" />
+                                        <figcaption>
+                                            <h3>Wall Mounts</h3>
+                                        </figcaption>
+                                    </div>
+                                    <div class="figure_item">
+                                        <img class="fig_img" src="/assets/image 36.png" />
+                                        <figcaption>
+                                            <h3>Tablet Cases</h3>
+                                        </figcaption>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <button class="secondaryButton">
+
+                                    Lockers
+                                    <span class="arrow_span">
+                                        <img class="arrow_right" src="/assets/right-arrow-svgrepo-com.svg" />
+                                    </span>
+                                </button>
+                                <div class="menu-list-items" data-list="2">
+                                    <div class="figure_item">
+                                        <img class="fig_img" src="/assets/image 32.png" />
+                                        <figcaption>
+                                            <h3>Table test 5</h3>
+                                        </figcaption>
+                                    </div>
+                                    <div class="figure_item">
+                                        <img class="fig_img" src="/assets/image 33.png" />
+                                        <figcaption>
+                                            <h3>Clamp test</h3>
+                                        </figcaption>
+                                    </div>
+                                    <div class="figure_item">
+                                        <img class="fig_img" src="/assets/image 34.png" />
+                                        <figcaption>
+                                            <h3>Kiosk & Desk Stands</h3>
+                                        </figcaption>
+                                    </div>
+                                    <div class="figure_item">
+                                        <img class="fig_img" src="/assets/image 35.png" />
+                                        <figcaption>
+                                            <h3>Wall Mounts</h3>
+                                        </figcaption>
+                                    </div>
+                                    <div class="figure_item">
+                                        <img class="fig_img" src="/assets/image 36.png" />
+                                        <figcaption>
+                                            <h3>Tablet Cases</h3>
+                                        </figcaption>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="menu-container__show">
+                            <div class="menu-list__show">
+
+                            </div>
+                        </div>
+                    </div>
+
+            <ul>
+                <li class="menu-nav-li" >
+                    <button class="menuButton Categories">
+                        Categories
+                    </button>
+                    <div class="menu-categories">
+
+                    </div>
                 </li>
                 <li class="menu-nav-li">
-                    <a href="#">Register</a>
+                    <button>
+                        Devices
+                    </button>
                 </li>
                 <li class="menu-nav-li">
                     <a href="#">My Account</a>
+
                 </li>
                 <li class="menu-nav-li">
-                    <a href="#">Wishlist</a>
+                    <button class="secondaryButton">Devices</button>
+                    <div class="menu-container close">
+
+                    </div>
+                </li>
+                <li class="menu-nav-li">
+                    <button class="secondaryButton">About</button>
+                    <div class="menu-container close">
+
+                    </div>
                 </li>
                 <li class="menu-nav-li">
                     <a href="#">Checkout</a>
@@ -75,16 +319,345 @@
                 </article>
                 <article class="nav-icons-userInteraction">
                     <svg class="svg-icon" viewBox="0 0 20 20">
-                        <path fill="none" d="M17.72,5.011H8.026c-0.271,0-0.49,0.219-0.49,0.489c0,0.271,0.219,0.489,0.49,0.489h8.962l-1.979,4.773H6.763L4.935,5.343C4.926,5.316,4.897,5.309,4.884,5.286c-0.011-0.024,0-0.051-0.017-0.074C4.833,5.166,4.025,4.081,2.33,3.908C2.068,3.883,1.822,4.075,1.795,4.344C1.767,4.612,1.962,4.853,2.231,4.88c1.143,0.118,1.703,0.738,1.808,0.866l1.91,5.661c0.066,0.199,0.252,0.333,0.463,0.333h8.924c0.116,0,0.22-0.053,0.308-0.128c0.027-0.023,0.042-0.048,0.063-0.076c0.026-0.034,0.063-0.058,0.08-0.099l2.384-5.75c0.062-0.151,0.046-0.323-0.045-0.458C18.036,5.092,17.883,5.011,17.72,5.011z"></path>
-                        <path fill="none" d="M8.251,12.386c-1.023,0-1.856,0.834-1.856,1.856s0.833,1.853,1.856,1.853c1.021,0,1.853-0.83,1.853-1.853S9.273,12.386,8.251,12.386z M8.251,15.116c-0.484,0-0.877-0.393-0.877-0.874c0-0.484,0.394-0.878,0.877-0.878c0.482,0,0.875,0.394,0.875,0.878C9.126,14.724,8.733,15.116,8.251,15.116z"></path>
-                        <path fill="none" d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z"></path>
+                        <path fill="none"
+                            d="M17.72,5.011H8.026c-0.271,0-0.49,0.219-0.49,0.489c0,0.271,0.219,0.489,0.49,0.489h8.962l-1.979,4.773H6.763L4.935,5.343C4.926,5.316,4.897,5.309,4.884,5.286c-0.011-0.024,0-0.051-0.017-0.074C4.833,5.166,4.025,4.081,2.33,3.908C2.068,3.883,1.822,4.075,1.795,4.344C1.767,4.612,1.962,4.853,2.231,4.88c1.143,0.118,1.703,0.738,1.808,0.866l1.91,5.661c0.066,0.199,0.252,0.333,0.463,0.333h8.924c0.116,0,0.22-0.053,0.308-0.128c0.027-0.023,0.042-0.048,0.063-0.076c0.026-0.034,0.063-0.058,0.08-0.099l2.384-5.75c0.062-0.151,0.046-0.323-0.045-0.458C18.036,5.092,17.883,5.011,17.72,5.011z">
+                        </path>
+                        <path fill="none"
+                            d="M8.251,12.386c-1.023,0-1.856,0.834-1.856,1.856s0.833,1.853,1.856,1.853c1.021,0,1.853-0.83,1.853-1.853S9.273,12.386,8.251,12.386z M8.251,15.116c-0.484,0-0.877-0.393-0.877-0.874c0-0.484,0.394-0.878,0.877-0.878c0.482,0,0.875,0.394,0.875,0.878C9.126,14.724,8.733,15.116,8.251,15.116z">
+                        </path>
+                        <path fill="none"
+                            d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z">
+                        </path>
                     </svg>
                 </article>
             </article>
         </nav>
+        <article class="nav-menu-lists">
+            <div class="nav-menu-wrapper">
+    
+            </div>
+        </article>
     </section>
-    <article class="nav-menu-lists"></article>
+    <section id="second-section" data-aos="opacity-enter" data-aos-delay="50">
+
+        <div class="circle-dark">
+        </div>
+        
+    </section>
+    <section id="third-section">
+        <div class="image_wrapper">
+            <a href="#footer">
+    
+                <div class="image_content_wrapper picture_4">
+                    <img src="/assets/PAD-2AMT-life-M1 1.png" alt="picture_4">
+                    <div class="content_image">
+                        <span class="header_content">Browse Stands By</span>
+                        <span class="subHeader_content">Type of Mount</span>
+                    </div>
+                    <div class="icon">
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="contet_shadow"></div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="image_content_wrapper picture_2">
+                    <img src="/assets/image (1).png" alt="picture_2">
+                    <div class="content_image">
+                        <span class="header_content">Browse Stands By</span>
+                        <span class="subHeader_content">Supported Devices</span>
+                    </div>
+                    <div class="icon">
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="contet_shadow"></div>
+                </div>
+    
+            </a>
+            <a href="#">
+    
+                <div class="image_content_wrapper picture_3">
+    
+                    <img src="/assets/image 3.png" alt="picture_3">
+                    <div class="content_image">
+                        <span class="header_content">Browse Stands By</span>
+                        <span class="subHeader_content">Usage</span>
+                    </div>
+                    <div class="icon">
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="contet_shadow"></div>
+                </div>
+            </a>
+            <a href="#">
+    
+                <div class="image_content_wrapper picture_1">
+                    <img src="/assets/15_PAD-CHKGRA_Lifestyle-Hotel Conference 1.png" alt="picture_1" class="">
+    
+                    <div class="content_image">
+                        <span class="header_content">Browse Stands By</span>
+                        <span class="subHeader_content">Industry</span>
+                    </div>
+                    <div class="icon">
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="contet_shadow"></div>
+                </div>
+            </a>
+    
+        </div>
+    </section>
+    <section id="fourth-section">
+        <article class="foruth-section-wrapper">
+            <div class="item_content">
+                <div class="item-header">
+                    <label>Table Mounts</label>
+                    <span>Adjective, adjective, adjective</span>
+                    <div>
+                        <button class="primaryButton fourSection">LEARN MORE</button>
+                        <button class="primaryButton fourSection">buy</button>
+                    </div>
+                </div>
+                <figure class="item-figure">
+                    <img src="/assets/PAD-IC109MOBY_Combo_01 1.png" alt="picture_1" class="">
+                </figure>
+            </div>
+            <div class="item_content">
+                <div class="item-header">
+                    <label>Table Mounts</label>
+                    <span>Adjective, adjective, adjective</span>
+                    <div>
+                        <button class="primaryButton fourSection">LEARN MORE</button>
+                        <button class="primaryButton fourSection">buy</button>
+                    </div>
+                </div>
+                <figure class="item-figure">
+                    <img src="/assets/image 41.png" alt="picture_1" class="">
+                </figure>
+            </div>
+            <div class="item_content">
+                <div class="item-header">
+                    <label>Table Mounts</label>
+                    <span>Adjective, adjective, adjective</span>
+                    <div>
+                        <button class="primaryButton fourSection">LEARN MORE</button>
+                        <button class="primaryButton fourSection">buy</button>
+                    </div>
+                </div>
+                <figure class="item-figure">
+                    <img src="/assets/image 42.png" alt="picture_1" class="">
+                </figure>
+            </div>
+            <div class="item_content">
+                <div class="item-header">
+                    <label>Table Mounts</label>
+                    <span>Adjective, adjective, adjective</span>
+                    <div>
+                        <button class="primaryButton fourSection">LEARN MORE</button>
+                        <button class="primaryButton fourSection">buy</button>
+                    </div>
+                </div>
+                <figure class="item-figure">
+                    <img src="/assets/image 43.png" alt="picture_1" class="">
+                </figure>
+            </div>
+        </article>
+    </section>
+
+
+    <section id="test4">
+
+    </section>
+
+    <footer class="footer_container">
+        <article class="footer_gray_bar">
+            <div class="bar__item-sections">
+                <img src="/assets/Link → mail-footer.svg.png"/>
+                <div class="bar_text_wrap">
+                    <span>Send Us An Email</span>
+                    <span>sales@ctadigital.com</span>
+                </div>
+            </div>
+            <div class="bar__item-sections">
+                <img src="/assets/phone-footer.svg.svg"/>
+                <div class="bar_text_wrap">
+                    <span>Give Us A Call</span>
+                    <span>1-888-733-4448</span>
+                </div>
+            </div>
+            <div class="bar__item-sections">
+                <span>Ask Us </br> Anything</span>
+                <button class="primaryButton">CONTACT US</button>
+            </div>
+        </article>
+        <article class="footer__Wrapper">
+            <div class="footer__sections">
+                <ul class="text__wrap">
+                    <li class="section__items">
+                        <img src="/assets/footer-logo.svg.png" />
+                    </li>
+                    <li class="section__items">
+                        <p>
+                            We invite you to browse our selection of
+                            mounting systems and accessories. Our
+                            customer service team is always standing by to
+                            help you find what you need and answer any
+                            questions you have.
+                        </p>
+                    </li>
+                    <li class="section__items">
+                        STAY CONNECTED
+                    </li>
+                    <li class="section__items">
+                        <article class="email__input-Wrapper">
+                            <input type="text" placeholder="Your email address" class="input_email_item">
+                            <button class="button_email-Input">
+                                <img src="/assets/send-plane-svgrepo-com (1).svg" />
+                            </button>
+                        </article>
+                    </li>
+                    <li class="section__items">
+                        <article class="social__media">
+                            <img src="/assets/vector social/Vector-1.png" />
+                            <img src="/assets/vector social/Vector-2.png" />
+                            <img src="/assets/vector social/Vector-3.png" />
+                            <img src="/assets/vector social/Vector-4.png" />
+                            <img src="/assets/vector social/Vector.png" />
+                        </article>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__sections">
+                <ul class="text__wrap">
+                    <li class="section__items">
+                        <span class="section__title">PRODUCTS</span>
+                    </li>
+                    <li class="section__items">
+                        <a>Promotions</a>
+                    </li>
+                    <li class="section__items">
+                        <a>Just In!</a>
+                    </li>
+                    <li class="section__items">
+                        <a>Download 2019 Product Catalog</a>
+                    </li>
+                    <li class="section__items">
+                        <a>Download CTA's Catalog of Top Healthcare </br>
+                            Products
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__sections">
+                <ul class="text__wrap">
+                    <li class="section__items">
+                        <span class="section__title"> WHAT WE DO</span>
+                    </li>
+                    <li class="section__items">
+                        <a>About us</a>
+                    </li>
+                    <li class="section__items">
+                        <a>Custom Solutions</a>
+                    </li>
+                    <li class="section__items">
+                        <a>Case Studies</a>
+                    </li>
+                    <li class="section__items">
+                        <a>Careers</a>
+                    </li>
+                    <li class="section__items">
+                        <a>Distributors</a>
+                    </li>
+                    <li class="section__items">
+                        <a>Blog</a>
+                    </li>
+                    <li class="section__items">
+                        <a>Warranty</a>
+                    </li>
+                    <li class="section__items">
+                        <a>Custom Branding</a>
+                    </li>
+            </div>
+            <div class="footer__sections">
+                <ul class="text__wrap">
+                    <li class="section__items">
+                        <span class="section__title"> WHAT WE DO</span>
+                    </li>
+                    <li class="section__items">
+                        <a>Education</a>
+                    </li>
+                    <li class="section__items">
+                        <a>Goverment</a>
+                    </li>
+                    <li class="section__items">
+                        <a>Healthcare</a>
+                    </li>
+                    <li class="section__items">
+                        <a>Hospitality</a>
+                    </li>
+                    <li class="section__items">
+                        <a>Retail</a>
+                    </li>
+                    <li class="section__items">
+                        <a>Transportation</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__sections">
+                <ul class="text__wrap">
+                    <li class="section__items">
+                        <span class="section__title">Contact</span>
+                    </li>
+                    <li class="section__items">
+                        <a>Bulk order</a>
+                    </li>
+                    <li class="section__items">
+                        <a>Terms & Conditions</a>
+                    </li>
+                    <li class="section__items">
+                        <a>Privacy Policy</a>
+                    </li>
+                    <li class="section__items">
+                        <a>Shipping</a>
+                    </li>
+                </ul>
+            </div>
+
+        </article>
+    </footer>
+
+
+    <section id="fifth-section">
+        <div class="section_wrapper" data-aos="fade-down">
+            <figure class="figure_section_fi">
+                    <img src="/assets/image 44.png"/>
+                
+                <div class="fig_dataContainer">
+                    <label>Don’t see what you need?
+                        Let us create it for you.</label>
+                        <span>No matter the challenge (and we love a good one), our team of engineers and product design specialists will custom design the perfect hardware mounting solution to fit your precise needs and specifications.</span>
+                        <button class="primaryButton">SEE WHAT WE'VE DONE</button>
+                </div>
+                <article class="contet_shadow shadow"></article>
+                <span class="span_figure">Customization</span>
+            </figure>
+        </div>
+    </section>
+    
+    
 
     <script src="index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="gsap.js"></script>
+<script src="logic.js"></script>
+
 </body>
+
 </html>
