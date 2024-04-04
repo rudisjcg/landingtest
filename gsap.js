@@ -1,10 +1,23 @@
 
-gsap.registerPlugin(ScrollTrigger) 
+gsap.registerPlugin(ScrollTrigger);
 
 let elem  = document.querySelector('.header-nav')
 let menuElem = document.querySelector('.nav-menu-lists')
 
 let blackColor = 'rgba(0, 0, 0, 0.65)';
+
+
+const lenis = new Lenis ({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
 
 gsap.to("#second-section", {
   scrollTrigger: {
@@ -83,7 +96,7 @@ gsap.to(".picture_1", {
     }),
     onEnter: () => gsap.to('.header-nav', {
       backgroundColor: blackColor,
-      duration: 1,
+      duration: 0.5,
     }),
     toggleClass: {targets: elem, className: 'header-scrolling'},
 

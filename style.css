@@ -106,9 +106,9 @@ a:visited {
 
 .menu--Logo ul {
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 20px;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .header-nav .nav_container {
@@ -215,7 +215,7 @@ a:visited {
     border-bottom: 1px solid black;
     position: absolute;
     margin-top: 100px;
-    top: 140px;
+    top: 90px;
     margin-top: 20px;
     height: 0;
     opacity: 0;
@@ -229,6 +229,12 @@ a:visited {
     opacity: 1;
     z-index: 10;
     transition: all 300ms ease;
+}
+
+
+.open-menu .menu-list, 
+.open-menu .menu-container__show {
+    transform: translateY(0);
 }
 
 .nav-menu-lists {
@@ -515,14 +521,15 @@ a:visited {
     opacity: 0;
     transition: all 300ms ease;
     background-color: #E6E6E6;
-    display: none;
+    display: flex;
+    z-index: 0;
 }
 
 .open-menu {
     height: 400px;
     opacity: 1;
-    display: flex;
     transition: all 300ms ease;
+    z-index: 1;
 
 }
 
@@ -545,6 +552,7 @@ a:visited {
 .menu-container__show {
     display: flex;
     flex-direction: column-reverse;
+    transform: translateY(-500px);
 }
 
 .menu-container__show label {
@@ -555,14 +563,15 @@ a:visited {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    transform: translateY(-500px);
 }
   
 .foruth-section-wrapper {
     width: 100%;
     height: 100%;
-    max-width: 1450px;
     display: grid;
     grid-template-columns: 1fr;
+    justify-items: center;
     gap: 20px;
     margin-top: 20px;
     background-color: white;
@@ -574,10 +583,9 @@ a:visited {
     flex-direction: column;
     align-items: center;
     gap: 40px;
-    width: 700px;
-    height: 100%;
-    max-width: 900px;
-    max-height: 520px;
+    width: 100%;
+    height: 560px;
+    max-height: 750px;
     overflow: hidden;
     background-color: #D9D9D9;
 }
@@ -585,14 +593,18 @@ a:visited {
 
 .menu-list li {
     text-align: left;
-    width: 100%;
+    width: 300px;
     padding-left: 50px;
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 60px;
 }
 
 .menu-list-items {
     position: absolute;
     margin-top: 200px;
     display: flex;
+    transform: translate(-1000px);
     
 }
 
@@ -661,6 +673,117 @@ figcaption {
     transform: translateX(0);
 }
 
+/* ----- sixth section dynamic_caseStudies_section ----- */
+
+#dynamic_caseStudies_section {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.caseStudies__title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: center;
+    color: #1D1D1D;
+}
+
+.caseStudies_wrapper {
+    width: 100%;
+    max-width: 1600px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.caseStudies__card-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+
+.case_studies_cards {
+    width: 100%;
+    max-width: 465px;
+    height: 100%;
+    max-height: 712px;
+    border-radius: 33px;
+    background-color: white;
+    transition: all 300ms ease;
+}
+
+.case_studies_cards:hover {
+    transform: translateY(-10px);
+}
+
+.card_figure {
+    width: 100%;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 33px;
+    }
+}
+
+.card_data {
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+}
+
+.card_data .card_title {
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    text-align: left;
+    line-height: 21px;
+    color: #333333;
+}
+
+.card_data .card_descrip {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    line-height: 26px;
+    color: #3D3E45;
+
+}
+
+
+.card_data .buttonAndLogo_card-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttonAndLogo_card-wrapper .primaryButton {
+    width: 132px;
+    height: 34px;
+    letter-spacing: 0.3px;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 5px 10px;
+}
+
+.buttonAndLogo_card-wrapper .primaryButton:hover {
+    background-color: #FF6363;
+    color: white;
+    transform: scale(1.1);
+}
+
+
 
 /* footer */
 
@@ -670,6 +793,7 @@ figcaption {
 
 .footer_container {
     height: 659.55px;
+    margin-top: 50px;
     width: 100%;
     position: relative;
     bottom: 0;
@@ -1053,6 +1177,9 @@ figcaption {
     height: 300px;
     z-index: 0;
 }
+
+
+
 
 /* ----- AOS animations ----- */
 
